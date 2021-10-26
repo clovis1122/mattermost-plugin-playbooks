@@ -74,6 +74,7 @@ export function makeRHSOpener(store: Store<GlobalState>): () => Promise<void> {
         }
 
         //@ts-ignore thunk
+        console.debug('playbook run not finished, opening', playbookRun, playbookRun?.current_status);
         store.dispatch(toggleRHS());
     };
 }
